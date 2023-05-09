@@ -1,0 +1,46 @@
+<!-- "JavaScript function to print child nodes of an HTML element" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       
+function print()
+{
+        let ob=document.getElementById('div1')
+        let ob2=document.getElementById("div3")
+        let size=ob.children.length
+        let c1=""
+        for(let i=0;i<size;i++)
+        {
+            c1+= ob.children[i].nodeName
+        }
+
+        document.body.innerHTML=c1
+
+        
+}
+        
+    </script>
+    
+</head>
+<body>
+    <div id="div1">
+        <input type="text" id="t1">
+        <input type="text" name="" id="t2">
+        <input type="text" name="" id="t3">
+        <input type="radio" name="" id="t4">
+
+    </div>
+    <div id="div2">
+        <input type="text" name="" id="t5">
+        <input type="radio" name="" id="t6">
+        <input type="text" name="" id="t7">
+
+    </div>
+    <div id="div3">
+
+    </div>
+    <input type="button"  value="childnode" onclick="print()">
+    <input type="button"  value="nextsibling" onclick="">
+</body>
+</html>

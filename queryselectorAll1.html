@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         function print()
+        {
+            let arr=document.querySelectorAll('.example')
+            for(let i=0;i<arr.length;i++)
+            {
+                let ob=arr[i]
+                ob.style.backgroundColor="red"
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>this is example of querySelector</h1>
+    <h2 class="example"> this is the heading</h2>
+    <p class="example">this is example of paragrph</p>
+    <input type="button" value="click here" onclick="print()">
+
+</body>
+</html>

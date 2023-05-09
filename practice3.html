@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function print()
+        {
+            let ob=document.getElementById('t1')
+            let s1=ob.value
+       let ob2=document.getElementById('t2')
+       let s2=ob2.value
+            let d1=document.getElementById('div1')
+            let d2=document.getElementById('div2')
+            d1.innerHTML=s1
+            d2.innerHTML=s2
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" value="">
+    <br>
+    <input type="text" name="" id="t2">
+
+    <input type="button" value="click here" onclick="print()">
+    <br>
+    <div id="div1">
+
+    </div>
+    <div id="div2">
+
+    </div>
+</body>
+</html>

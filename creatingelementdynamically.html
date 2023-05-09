@@ -1,0 +1,19 @@
+<!-- Dynamically adding a div element to an HTML document using JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function print()
+        {
+            let ob=document.createElement("div")
+            
+           ob.innerText="this is the div tag"
+           document.body.append(ob)
+        }   
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="click here" onclick="print()"><br>
+</body>
+</html>

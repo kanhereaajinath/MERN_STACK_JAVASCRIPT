@@ -1,0 +1,42 @@
+<!-- Add paragraph element to body with text “The Document Object Model (DOM) is a 
+programming interface for HTML and XML documents. It represents the page so that programs 
+can change the document structure, style, and content. The DOM represents the document as 
+nodes and objects. That way, programming languages can connect to the page.”
+• Set the paragraph text color to purple
+• Add another paragraph to body with text” A Web page is a document. This document can be 
+either displayed in the browser window or as the HTML source. But it is the same document in 
+both cases. The Document Object Model (DOM) represents that same document so it can be 
+manipulated. The DOM is an object-oriented representation of the web page, which can be 
+modified with a scripting language such as JavaScript.”
+• Set another paragraph text color to red
+• Set the body color to light grey -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <script>
+        document.body.style.backgroundColor='green'
+        function chagetext()
+        {
+            let obj=document.getElementById('p1')
+            obj.style.backgroundColor="red"        }
+function blue(){
+    let ob=document.getElementById('p2')
+ob.style.backgroundColor="blue"
+} 
+  </script>
+</head>
+<body>
+   <p id="p1">
+    this is the paragraph 
+   </p> 
+   <p id="p2" s>
+    this is the another paragraph
+
+   </p>
+   <input type="button" name="red" value="red" onclick="chagetext()"><br>
+   <input type="button" name="blue" value="blue" onclick="blue()">
+   <input type="button" name="greem" value="green" onclick="changecolro()">
+</body>
+</html>

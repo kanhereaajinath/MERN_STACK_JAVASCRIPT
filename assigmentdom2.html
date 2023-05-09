@@ -1,0 +1,49 @@
+<!-- 21)"Dynamic Table Creation with Form Inputs using JavaScript" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function save(){
+  let ob=document.getElementById('t1')
+  let ob1=document.getElementById('t2')
+  let ob2=document.getElementById('t3')
+  let s1=ob.value 
+  let s2=ob1.value
+  let s3=ob2.value
+  let table=document.getElementById('tab')
+  let row=document.createElement('tr')
+  let c1=document.createElement('td')
+  let c2=document.createElement('td')
+  let c3=document.createElement('td')
+  c1.innerText=s1
+  c2.innerText=s2
+  c3.innerText=s3
+  row.append(c1)
+  row.append(c2)
+  row.append(c3)
+  table.append(row)
+   
+    }
+    </script>
+</head>
+<body>
+  
+    <label>Enter your Id</label>
+    <input type="text" id="t1" placeholder="id">
+    <label for="">Enter your name</label>
+    <input type="text" name="" id="t2">
+    <label for="">Enter your address</label>
+    <input type="text" name="" id="t3">
+    <input type="submit" value="save" onclick="save()" >
+
+    <table border="1" id="tab">
+        
+          <th>Id</th>
+          <th>Name</th>
+          <th>Address</th>
+      </table>
+      
+
+</body>
+</html>

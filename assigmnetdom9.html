@@ -1,0 +1,197 @@
+<!-- We need you to write code that will create a table dynamically based upon a [dataset we 
+provide](addressData.js). 
+## Your Task
+* Create a basic HTML web page.
+* Using the ufo dataset provided in the form of a JavaScript object, write code that appends a 
+table to your web page and then adds new rows of data for each UFO sighting.
+ * Make sure you have a column for `date/time`, `city`, `state`, `country`, `shape`, and 
+`comment` at the very least -->
+
+<html>
+
+<body>
+    <script>
+        function print() {
+            let arr1=[]
+            var addressData = [
+            {
+    datetime: "1/1/2010",
+    city: "benton",
+    state: "ar",
+    country: "us",
+    shape: "circle",
+    durationMinutes: "5 mins.",
+    comments: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
+  },
+  {
+    datetime: "1/1/2010",
+    city: "bonita",
+    state: "ca",
+    country: "us",
+    shape: "light",
+    durationMinutes: "13 minutes",
+    comments: "Three bright red lights witnessed floating stationary over San Diego New Years Day 2010"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "el cajon",
+    state: "ca",
+    country: "us",
+    shape: "triangle",
+    durationMinutes: "6 minutes",
+    comments: "On New Years Eve I went outside to hear the celebration and fireworks in my neighbor hood. And noticed 3 red lights above my house and"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "el cajon",
+    state: "ca",
+    country: "us",
+    shape: "triangle",
+    durationMinutes: "12 minutes",
+    comments: "3 Red objects hovering over El Cajon CA"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "fresno",
+    state: "ca",
+    country: "us",
+    shape: "light",
+    durationMinutes: "1 min",
+    comments: "Fresno cal. bright light hovers over head then vanished"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "grants pass",
+    state: "or",
+    country: "us",
+    shape: "triangle",
+    durationMinutes: "a few mintues",
+    comments: "Triangle shaped craft with three red lights at points hovering over Grants Pass&#44 Oregon."
+  },
+  {
+    datetime: "1/1/2010",
+    city: "la mesa",
+    state: "ca",
+    country: "us",
+    shape: "light",
+    durationMinutes: "10 min",
+    comments: "Three red lights over southern California that made a triangle shape"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "lemon grove",
+    state: "ca",
+    country: "us",
+    shape: "light",
+    durationMinutes: "about 15 minutes",
+    comments: "3 Red lights in line pattern above El Cajon/ East County."
+  },
+  {
+    datetime: "1/1/2010",
+    city: "maricopa",
+    state: "az",
+    country: "us",
+    shape: "unknown",
+    durationMinutes: "3 minutes",
+    comments: "One huge UFO or three seperate ones"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "park city",
+    state: "ky",
+    country: "us",
+    shape: "light",
+    durationMinutes: "2-3 seconds",
+    comments: "Lights orbiting the moon"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "st. louis",
+    state: "mo",
+    country: "us",
+    shape: "fireball",
+    durationMinutes: "1 min",
+    comments: "7 floating orbs or fireballs moving from southwest to northeast direction."
+  },
+  {
+    datetime: "1/1/2010",
+    city: "el cajon",
+    state: "ca",
+    country: "us",
+    shape: "formation",
+    durationMinutes: "15 min.",
+    comments: "Three red lights over the San Diego area - IT&#39S A HOAX YET AGAIN&#33&#33"
+  },
+  {
+    datetime: "1/1/2010",
+    city: "spring valley",
+    state: "ca",
+    country: "us",
+    shape: "light",
+    durationMinutes: "10:00",
+    comments: "Three bright red lights in a straight line formation"
+  },
+            ]
+            for(let i=0;i<addressData.length;i++)
+            {
+                let y=addressData[i]
+                arr1.push(y)
+
+            }
+            console.log(arr1)
+            let table=document.getElementById('tab1')
+            
+            for(let j=0;j<addressData.length;j++)
+            {
+                let addr=addressData[j]
+                let row=document.createElement('tr')
+
+               
+                    let c=document.createElement('td')
+                    c.innerText=addr.datetime
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.city
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.state
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.country
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.shape
+                     row.append(c)
+                    c=document.createElement('td')
+                    
+                    c.innerText=addr.durationMinutes
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.comments
+                    row.append(c)
+                    
+
+              
+                table.append(row)
+
+
+            }
+            
+            
+        }
+
+    </script>
+</body>
+<input type="button" value="click" onclick="print()">
+<table id="tab1" border="1"> 
+    <th>datetime</th>
+    <th>city</th>
+    <th>state</th>
+    <th>contry</th>
+    <th>shape</th>
+    <th>durationMinutes</th>
+    <th>comments</th>
+    
+</table>
+
+</html>

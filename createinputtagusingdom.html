@@ -1,0 +1,18 @@
+<!-- Dynamically adding a text input element to an HTML document using JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    function print()
+    {
+        let ob=document.createElement('input')
+        ob.setAttribute("type","text")
+        ob.setAttribute("value","xyz")
+    document.body.append(ob)
+    }
+   </script>
+</head>
+<body>
+   <input type="button" value="click"onclick="print()">
+</body>
+</html>

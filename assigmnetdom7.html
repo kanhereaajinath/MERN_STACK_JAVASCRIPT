@@ -1,0 +1,34 @@
+<!-- DOM manipulation using JavaScript to add, append, prepend, before and after elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function print()
+        {
+            let ob=document.getElementById('d1')
+            let p1=document.createElement('p')
+            let p2=document.createElement("p")
+            let p3=document.createElement("p")
+            let p4=document.createElement("p")
+
+            p1.innerText="this is p1"
+            p2.innerText="this is p2"
+            p3.innerText="this is p3"
+            p4.innerText="this is p4"
+            
+            ob.append(p1)
+            ob.prepend(p2)
+            ob.after(p3)
+            ob.before(p4)
+
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        
+    </div>
+    
+    <input type="button" value="create" onclick="print()">
+</body>
+</html>

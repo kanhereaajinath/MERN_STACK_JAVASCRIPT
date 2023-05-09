@@ -1,0 +1,30 @@
+<!-- JavaScript DOM manipulation to change the background color and text content of HTML elements. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function chagecolor()
+        {
+document.body.style.backgroundColor='red'
+        }
+        function changetext()
+        {
+        let obj=document.getElementById("meg")
+        obj.innerText="this is hello from javascipt"
+
+        }
+    </script>
+</head>
+<body>
+    hello javaScript dom manuplation <br>
+<div id="msg">
+
+</div>
+<br> 
+after div tag 
+        <input type="button" value="red" onclick="chagecolor()">
+        <br>
+        click for button to goes to javascipt text  <br>
+       <input type="button" value="click here" onclick="changetext()">
+</body>
+</html>

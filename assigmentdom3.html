@@ -1,0 +1,96 @@
+<!--  "Dynamic Table Creation with User Input using JavaScript Form" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function create()
+        {
+            let ob=document.getElementById('t1')
+            let ob1=document.getElementById('t2')
+            let ob3=document.getElementById('t3')
+            let ob4=document.getElementById('t4')
+            let ob5=document.getElementById('t5')
+            let ob6=document.getElementById('t6')
+            let ob7=document.getElementById('t7')
+            let ob8=document.getElementById('t8')
+            let a1=ob.value 
+            let a2=ob1.value
+            let a3=ob3.value
+            let a4=ob4.value
+            let a5=ob5.value
+            let a6=ob6.value
+            let a7=ob7.value
+            let a8=ob8.value
+            let table=document.getElementById('tab1')
+            let row=document.createElement('tr')
+            let c1=document.createElement('td')
+            let c2=document.createElement('td')
+            let c3=document.createElement('td')
+            let c4=document.createElement('td')
+            let c5=document.createElement('td')
+            let c6=document.createElement('td')
+            let c7=document.createElement('td')
+            let c8=document.createElement('td')
+            c1.innerText=a1
+            c2.innerText=a2
+            c3.innerText=a3
+            c4.innerText=a4
+            c5.innerText=a5
+            c6.innerText=a6
+            c7.innerText=a7
+            c8.innerText=a8
+            row.append(c1)
+            row.append(c2)
+            row.append(c3)
+            row.append(c4)
+            row.append(c5)
+            row.append(c6)
+            row.append(c6)
+            row.append(c7)
+            row.append(c8)
+            table.append(row)
+
+        }
+    </script>
+</head>
+<body>
+    <label>Name:</label>
+    <input type="text" value="" id="t1">
+    <br>
+    <label for="">Middle Name:</label>
+    <input type="text" value="" id="t2">
+<br>
+<label for="">Last Name:</label>
+<input type="text" value="" id="t3">
+<br>
+<label for="">DOB:</label>
+<input type="date"  value="" id="t4">
+<br>
+<label for="">Enter your Email :</label>
+<input type="email" value=""  id="t5">
+<br>
+<label for="">MOBILE:</label>
+<input type="text" id="t6" value="">
+<br>
+<label for="">Password:</label>
+<input type="password"  id="t7" value="">
+<br>
+<label for="">C_Password</label>
+<input type="password"  id="t8" value="">
+<br>
+<input type="button" value="submit" onclick="create()">
+
+<table border="1" id="tab1">
+    <th>Name</th>
+    <th>Middle Name</th>
+    <th>last Name</th>
+    <th>Dob</th>
+    <th>Email</th>
+    <th>MOBILE</th>
+    <th>Password</th>
+    <th>C_Password</th>
+
+</table>
+
+</body>
+</html>

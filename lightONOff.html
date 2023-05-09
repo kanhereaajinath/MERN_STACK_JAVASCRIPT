@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+    function bulb_on(){
+        document.getElementById('bulb').src='on.jpeg';
+    }
+    function bulb_off(){
+        document.getElementById('bulb').src='off.jpg';
+    }
+</script>
+</head>
+
+<body>
+    <header>
+        <h1>bulb on off project in javascript</h1>
+    </header>
+    <section>
+        <img src="off.jpg" id="bulb" width="200" onmouseover="bulb_on()" onmouseleave="bulb_off()">
+
+        <input type="button" value="on" onclick="bulb_on()">
+        <input type="button" value="of" onclick="bulb_off()">  
+        
+    </section>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+ <!-- "Dynamic DOM Manipulation using JavaScript Buttons" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script>
+        function create()
+        {
+            let ob=document.createElement('div')
+            let inp=document.createElement('input')
+            inp.setAttribute("type","text")
+            inp.setAttribute("id","t1")
+           document.body.append(inp)
+            document.body.append(ob)
+
+        }
+        function test()
+        {
+            let re=document.getElementById('t1')
+            re.remove()
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click here" onclick="create()">
+    <input type="button" value="delete" onclick="test()">
+</body>
+</html>

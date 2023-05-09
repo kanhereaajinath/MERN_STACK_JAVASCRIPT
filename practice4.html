@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function add()
+        {
+            let ob=document.getElementById('t1')
+            let s1=ob.value 
+            alert(s1)
+            let ob1=document.getElementById('t2')
+             let s2=ob1.value 
+            alert(s2)
+            let z= parseInt(s1)+parseInt(s2)
+            let d1=document.getElementById('t4')
+            d1.innerHTML=z;
+           
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="t1" value="">
+    <br>
+    <input type="text" id="t2" value="">
+    <br>
+    <labele>additon is </labele>
+    <input type="button" id="t3" value="click here" onclick="add()" >
+    <input type="text" name="" id="t4">
+    <div id="d1">
+
+    </div>
+</body>
+</html>

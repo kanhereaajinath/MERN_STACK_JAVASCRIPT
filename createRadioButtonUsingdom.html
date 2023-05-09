@@ -1,0 +1,25 @@
+<!-- Dynamically adding a radio button and label element to an HTML document using JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function print()
+        {
+            let ob=document.createElement('input')
+            ob.setAttribute("type","radio")
+            ob.setAttribute("value","male")
+        let ob1=document.createElement('label')
+        ob1.innerText="male"
+        document.body.append(ob)
+        document.body.append(ob1)
+
+
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="click here" onclick="print()">
+    
+</body>
+</html>

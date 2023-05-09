@@ -1,0 +1,75 @@
+<!--
+    User can type his/her numbers with a space between each number (as a string with the space character as
+     a delimiter or space separated numeric values) inside an input box (You need to notify the user to
+      enter the numbers with a space between every two numbers).
+    Then the user can choose only one of the basic excel functions (buttons) to do the required calculation.
+    When the button  is clicked, a perticular function called.Perform following  the following steps:
+        Get the user input (string of numbers and spaces) and save it into a variable named “numberStr”.
+        Make sure to remove all the extra spaces before and after the user input (Remove whitespace from
+         both sides of a string) using the appropriate JavaScript built-in method.
+        Convert the string user input “numberStr” into an array of numbers named “numberArr” using the
+         appropriate JavaScript built-in method for array object.
+    Continuing inside myExcelFuns(), you will use if condition to scan or to check which radio button
+     was selected and based on this selection you will do the right calculations.
+        Use if else blocks to do the required calculation based on the selected radio button:
+            If (the AutoSum clicked) ➔ Do the calculation to find the total of all the numbers
+            else if (the Average clicked) ➔ Do the calculation to find the average of the numbers
+            else if (the Max clicked) ➔ Do the calculation to find the maximum number
+            else ➔ Do the calculation to find the minimum number
+        The returned value for each if condition has to be saved into a global variable based on 
+        our function (it’s a local variable based on the entire JS file) named “result”, so you will
+         need to declare this empty variable first, then use it inside each if condition and else block.
+ 
+    At the end of all the if else blocks (4 blocks), use the getElementById() method to print your result
+     (the value of the result variable) into your specific HTML element.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    let result = 0;
+    function myExcelFuns() {
+      let numberInput = document.getElementById('d1')
+      let calculationInput = document.querySelector('input[name="calculation"]:checked');
+      let calculateButton = document.getElementById('calculate-button')
+      calculateButton.addEventListener("click", () => {
+        const numberStr = numberInput.value.trim();
+
+        const numberArr = numberStr.split(" ").map(Number);
+
+        if (calculationInput.value === "Autosum") {
+          result = numberArr.reduce((sum, n) => sum + n, 0);
+        } else if (calculationInput.value === "Avrage") {
+          result = numberArr.reduce((sum, n) => sum + n, 0) / numberArr.length;
+        } else if (calculationInput.value === "Max") {
+          result = Math.max(...numberArr);
+        } else {
+          result = Math.min(...numberArr);
+        }
+
+
+        document.getElementById('result').textContent = result
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <label for="input_number">Engter a number with space</label>
+  <input type="text" name="number" value="" placeholder="eg 1 2 3 4 " id="d1">
+  <br>
+  <div>
+    <input type="radio" name="calculation" id="t1" value="Autosum">
+    <label>AUTO SUM</label>
+    <input type="radio" name="calculation" id="t2" value="Avrage">
+    <label>Avrage</label>
+    <input type="radio" name="calculation" id="t3" value="Max">
+    <label for="">MAX</label>
+    <input type="radio" name="calculation" id="t4" value="MIN">
+    <label for="">MIN</label>
+  </div>
+  <button id="calculate-button" onclick="myExcelFuns()">Calculate</button>
+  <p id="result"> </p>
+</body>
+
+</html>

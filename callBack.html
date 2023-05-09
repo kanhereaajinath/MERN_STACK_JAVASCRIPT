@@ -1,0 +1,39 @@
+<!-- Creating a confirm dialog box in an HTML page using JavaScript. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    this is the html page 
+    <script>
+        function ok()
+        {
+            alert("user clicked ok")
+        }
+        function cancle()
+        {
+            alert("user clicked on cancle")
+        }
+
+        function ask(question,yes,no)
+        {
+            let f=confirm(question)
+            if(f)
+            {
+                yes()
+            }
+            else
+            {
+                no()
+            }
+        }
+         ask("do you want exit",ok,cancle)
+
+
+    </script>
+</body>
+</html>

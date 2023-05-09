@@ -1,0 +1,57 @@
+<!--You will create a web form to ask the user to enter the following information using the appropriate HTML5 form controls (elements) to represent each item in the list below:
+
+    First Name ➔ input field of type text.
+    Last Name ➔ input field of type text.
+    Email Address ➔ input field of type email.
+    Address ➔ input field of type text.
+    City ➔ input field of type text.
+     
+    Send button to call (trigger) a function named “userForm()”, which you will have to create, will take all the form information (user’s input) and display in div tag-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function print() {
+            let ob = document.getElementById('t1')
+            let s1 = ob.value
+            let ob1 = document.getElementById('t2')
+            let s2 = ob1.value
+
+            let ob3 = document.getElementById('t3')
+            let s3 = ob3.value
+            let ob4 = document.getElementById('t4')
+            let s4 = ob4.value
+            let ob5 = document.getElementById('t5')
+            let s5 = ob5.value
+            let d1 = document.getElementById('div1')
+            let z = s1 + "\n" + s2 + "\n" + s3 + "\n" + s4 + "\n" + s5
+            d1.innerText = z
+        }
+    </script>
+</head>
+
+<body>
+    <label>Enter your first name</label>
+    <input type="text" id="t1" placeholder="first name">
+    <br>
+    <label>Enter your last name</label>
+    <input type="text" id="t2" placeholder="lastname">
+    <br>
+    <label>enter your email</label>
+    <input type="email" name="email" id="t3">
+    <br>
+    <label>Enter your address</label>
+    <input type="text" id="t4" name="address"><br>
+    <label for="">Enter your city</label>
+
+    <input type="text" id="t5" name="city" placeholder="city">
+    <br>
+    <input type="button" value="click here" onclick="print()">
+    <div id="div1">
+
+    </div>
+
+</body>
+
+</html>

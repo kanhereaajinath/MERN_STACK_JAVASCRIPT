@@ -1,0 +1,39 @@
+ <!-- "Dynamic Input Generation using JavaScript". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function create()
+        {
+            let ob=document.createElement("input")
+            ob.setAttribute("type","text")
+            ob.setAttribute("id","t1")
+
+            document.body.append(ob)
+            
+
+        }
+        function  gen()
+        {
+            let ob=document.getElementById("t1")
+            let s1=parseInt(ob.value )
+
+            
+            for(let i=0;i<s1;i++)
+            {
+              let ob1=  document.createElement('input')
+            ob1.setAttribute("type","text")
+            ob1.setAttribute('id','d'+i)
+            document.body.append(ob1)
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    
+
+    <input type="button" value="click here"onclick="create()">
+    <input type="button" value="genrate" onclick="gen()">
+</body>
+</html>

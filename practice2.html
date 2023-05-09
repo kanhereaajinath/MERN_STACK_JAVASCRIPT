@@ -1,0 +1,35 @@
+<!-- It appears to be a basic HTML page containing two div elements and some JavaScript code to 
+access and manipulate their child nodes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <div id="d1">
+        <input type="button" id="b1" value="click here">
+        hello world 
+        <br>
+
+    </div>
+    <div id="d2">
+        <input type="text" id="t1">
+        <br>
+    </div>
+    <script>
+        let ob=document.getElementById('d1')
+        let size=ob.children.length
+        for(let i=0;i<size;i++)
+        {
+            console.log(ob.children[i])
+        }
+        console.log(ob.firstChild)
+        console.log(ob.lastChild)
+        console.log(ob.nextSibling)
+        console.log(ob.previousSibling)
+        console.log(ob.nextElementSibling)
+        console.log(ob.previousElementSibling)
+
+    </script>
+</body>
+</html>
