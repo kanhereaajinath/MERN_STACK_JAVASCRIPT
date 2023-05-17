@@ -1,0 +1,50 @@
+<!-- "Number Validation and Age Verification" -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Validation</title>
+  <script>
+    function validateNumber() {
+      var input = document.getElementById('myTextBox').value;
+      
+      if (isNaN(input)){
+        alert('Please enter a valid number.');
+      
+        
+      } else {
+
+        alert('number is valid' + input);
+      }
+      
+    }
+    function validateAge()
+    {
+      let input= document.getElementById('t1')
+      let ob=document.getElementById('t2')
+
+      let s1=input.value 
+      if(s1>1&&s1<=100)
+      {
+        ob.innerText=s1
+       
+
+      }
+      else
+      {
+        ob.innerText="*plese enter valid number"
+      }
+    }
+     </script>
+</head>
+<body>
+  <label for="">Enter Valid Number</label>
+  <input type="text" id="myTextBox" />
+  <br>
+  <input type="text" name="" id="t1">
+  <br>
+  <label for="" id="t2">The </label>
+  <button onclick="validateNumber()">Validate</button>
+  <button id="t5" onclick="validateAge()">validateAge</button>
+
+</body>
+</html>
