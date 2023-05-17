@@ -1,0 +1,30 @@
+<!-- "Language List Management" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    function add()
+    {
+        let ob=document.getElementById('t1')
+        let s1=ob.value 
+    let ol=document.getElementById("l1")
+    ol.setAttribute("type","I")
+  let li=document.createElement('li')
+  li.innerText=s1
+  ol.append(li)
+  
+
+
+    }
+</script>
+   
+</head>
+<body>
+    <label>Enter your Language</label>
+    <input type="text" name="" id="t1">
+    <input type="button"  id="t2" value="Add" onclick="add()">
+    <ol id="l1">
+    
+    </ol>
+</body>
+</html>
