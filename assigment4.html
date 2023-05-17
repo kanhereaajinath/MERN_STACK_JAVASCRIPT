@@ -1,0 +1,48 @@
+<!-- "Number and Character List Management" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+        let result = 'number'
+        function add() {
+             let ob = document.getElementById('t1')
+             let s1 = ob.value
+             let ol = document.getElementById("t2")
+             let li = document.createElement("li")
+             li.innerText=s1
+            // let list = document.getElementById("list")
+            // let cal = document.querySelector('input[name="list"]:checked');
+            if(result=='char'){
+                ol.setAttribute("type","A")
+            }    
+            ol.append(li)
+        } 
+        function radioclick1() {
+          
+            result='number'
+
+        }
+        function radioclick2() {
+           
+            result='char'
+
+        }
+ </script>
+</head>
+
+<body>
+    <input type="text" name="" id="t1">
+    <label for=""> Number</label>
+    <input type="radio" name="list" id="t3" value="NUM" onclick="radioclick1()">
+    <label for="">Char</label>
+
+    <input type="radio" name="list" id="t4" value="char" onclick="radioclick2()">
+    <button id="list" onclick="add()">add</button>
+    <ol id="t2">
+
+    </ol>
+
+</body>
+
+</html>
