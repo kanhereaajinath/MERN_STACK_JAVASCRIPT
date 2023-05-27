@@ -1,0 +1,147 @@
+<!-- "Student Information Management System" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+let result='Male'
+function add()
+{
+     let ob=document.getElementById('t1')
+     let s1=ob.value 
+     let ob1=document.getElementById('t2')
+     let s2=ob1.value
+     let ob2=document.getElementById('t3')
+     let s3=ob2.value
+     let ob3=document.getElementById('t4')
+     let s4=ob3.value
+     let ob4=document.getElementById('t5')
+     let s5=ob4.value
+     let ob5=document.getElementById('t6')
+     let s6=ob5.value
+     let ob6=document.getElementById('t7')
+     let s7=ob6.value
+    
+     let table=document.getElementById('tab')
+            let row=document.createElement('tr')
+            let c1=document.createElement('td')
+            let c2=document.createElement('td')
+            let c3=document.createElement('td')
+            let c4=document.createElement('td')
+            let c5=document.createElement('td')
+            let c6=document.createElement('td')
+            
+            c1.innerText=s1
+            c2.innerText=s2
+            c3.innerText=s3
+            c4.innerText=s4
+            c5.innerText=s5
+            row.append(c1)
+            row.append(c2)
+            row.append(c3)
+            row.append(c4)
+            row.append(c5)
+            row.append(c6)
+            table.append(row)
+          
+          ob.value=""
+          ob1.value=""
+          ob2.value=""
+          ob3.value=""
+          ob4.value=""
+         
+
+    if(result=='male')
+    {
+   c6.innerText=s6
+   ob5.value=""
+        
+    }
+    else{
+       c6.innerText=s7
+       ob6.value=""
+    }
+
+   
+   
+
+}
+function male()
+{
+    result='male'
+}
+function Female()
+{
+    result='Female'
+}
+</script>
+<style>
+    table{
+        background-color: rgb(218, 133, 42);
+        align-items: center;
+        color: black;
+        margin-left:400px;
+        margin-right: 100px;
+        background-attachment: fixed;
+       
+    }
+    #div
+    {
+        background-attachment: fixed;
+    }
+    p{
+        margin-left: 300px;
+    }
+   
+</style>
+</head>
+
+<body>
+    <table border="1"  >
+<caption style="background-color: aqua; font-size: 20px;">Student Information</caption>
+        <tr>
+            <td><label for="">Name</label></td>
+            <td><input type="text" name="" id="t1"></td>
+
+        </tr>
+        <tr>
+            <td><label for="">Sur Name</label></td>
+            <td><input type="text" name="" id="t2"></td>
+
+        </tr>
+        <tr>
+            <td><label for="">Email</label></td>
+            <td><input type="email" name="" id="t3"></td>
+
+        </tr>
+        <tr>
+            <td><label for="">Phone</label></td>
+            <td><input type="number" name="" id="t4"></td>
+        </tr>
+        <tr>
+            <td><label for="">Password</label></td>
+            <td><input type="password" name="" id="t5"></td>
+
+        </tr>
+        <tr>
+            <td><label for="">Gender</label></td>
+            <td><input type="radio" name="Gender" id="t6" value="Male" onclick="male()"><label for="">Male</label> <input type="radio" name="Gender"
+                    id="t7" value="Female" onclick="Female()"> <label for="">Female</label></td>
+
+        </tr>
+        <tr>
+            <td><input style=" background-color: lawngreen;" type="button" name="" id="" onclick="add()" value="Submit"></td>
+        </tr>
+    </table>
+   
+<table id="tab" border="1" style="background-color: rgb(91, 212, 39); color :black;margin-left: 350px; border:dotted;margin-top: 100px;">
+    <th>Name</th>
+    <th>SurName</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>password</th>
+    <th>Gender</th>
+</table>
+</body>
+
+</html>
