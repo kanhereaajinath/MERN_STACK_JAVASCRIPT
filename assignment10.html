@@ -1,0 +1,139 @@
+<!-- Add Dynamicliy table usin css html javascript into table  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    let arr=[]
+    function add()
+    {
+        let arr1 = [
+                {
+                TLD:".com",
+                Duaration:"1Year",
+                Registation:"$70.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+
+                },
+                {
+                    TLD:".net",
+                Duaration:"1Year",
+                Registation:"$75.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+                },
+                {
+                    TLD:".org",
+                Duaration:"1Year",
+                Registation:"$65.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+                },
+                {
+                    TLD:".biz",
+                Duaration:"1Year",
+                Registation:"$60.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+                },
+                {
+                    TLD:".info",
+                Duaration:"1Year",
+                Registation:"$50.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+                },
+                {
+                    TLD:".info",
+                Duaration:"1Year",
+                Registation:"$45.00",
+                Renewal:"$5.00",
+                Transfer:"$5.00"
+                },
+
+            ]
+            for(let i=0;i<arr1.length;i++)
+            {
+                let y=arr1[i]
+                arr.push(y)
+
+            }
+            let tab=document.getElementById("tab")
+         let tbody=document.createElement("tbody")
+            for(let j=0;j<arr1.length;j++)
+            {
+                let addr=arr1[j]
+                let row=document.createElement('tr')
+                
+                let c=document.createElement('td')
+                    c.innerText=addr.TLD
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.Duaration
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.Registation
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.Renewal
+                    row.append(c)
+                    c=document.createElement('td')
+                    c.innerText=addr.Transfer
+                     row.append(c)
+                     c=document.createElement('td')
+                     
+                     let ob=document.createElement("input")
+                    ob.setAttribute("type","button")
+                    ob.setAttribute("value","sign Up")
+                    c.append(ob)
+                     row.append(c)
+                     tbody.append(row)
+                     tab.append(tbody)
+                   
+            }
+
+    }
+   </script>
+   <style>
+    
+    th{
+        background-color: blueviolet;
+        color:white;
+
+    }
+    table{
+        margin-left: 500px;
+        border-spacing: 0px;
+        
+    }
+    tbody td:nth-child(odd)
+    {
+        background-color:rgb(227, 214, 214) ;
+        
+    }
+    td{
+        padding: 30px;
+        text-align: center;
+    }
+    input{
+        background-color: rgb(157, 107, 205);
+    }
+    
+   </style>
+</head>
+<body>
+    <table id="tab">
+        <caption>Create Your Domain Name</caption>
+
+        <th>TLD</th>
+        <th>Duration</th>
+        <th>Registation </th>
+        <th>Renewal</th>
+        <th>Transfer</th>
+        <th>Register</th>
+
+
+    </table>
+    <input style="margin-left: 500px; color: red; background-color: rgb(109, 176, 109);" type="button" name="" id="" value="Create" onclick="add()">
+</body>
+</html>

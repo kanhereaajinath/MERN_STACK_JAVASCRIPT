@@ -1,0 +1,63 @@
+<!-- HTML Grid Layout with Spanning Tracks -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+     body{
+        margin: 200px;
+    }
+    /* this is the wrapper class */
+    .wrapper{
+        /*view display in the body*/
+            display: grid;
+            /*it is use to specify number of colums in each row and the size of in each column*/
+            /* grid-template-columns: 100px 100px 100px; */
+            /* this line specify reapeat function the syntax is below   */
+            grid-template-columns: repeat(3, 100px);
+
+            /*the repate function is use to 
+            /*it is use to specify the space between to  adjasent columns*/
+            grid-gap: 20px;
+            background-color: white;
+            color: #444;
+        }
+        .box 
+        {
+            background-color: #444;
+            color: #fff;
+            /* it is use to create round border and also change the border shape */
+            
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .a{   
+             /*   spaning track we use sort and end values to specify to how many column 
+             or rows elemnet can take we can also use span keyword to specify number of rows and column 
+             element can take */
+            grid-column: 1/span 2;
+        }
+        .b{
+            grid-column: 3;
+            grid-row:1/span 2;
+
+        }
+        .c{
+            grid-column:1;
+            grid-row:2;
+        }
+        .d{
+            grid-column: 2;
+            grid-row:2;
+        }
+   </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+    </div>
+</body>
+</html>

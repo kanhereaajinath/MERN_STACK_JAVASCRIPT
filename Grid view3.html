@@ -1,0 +1,79 @@
+<!-- line base placment short hand -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+     body{
+        margin: 200px;
+    }
+    /* this is the wrapper class */
+    .wrapper{
+        /*view display in the body*/
+            display: grid;
+            /*it is use to specify number of colums in each row and the size of in each column*/
+            grid-template-columns: 100px 100px 100px;
+            /*it is use to specify the space between to  adjasent columns*/
+            grid-gap: 20px;
+            background-color: white;
+            color: #444;
+        }
+        .box 
+        {
+            background-color: #444;
+            color: #fff;
+            /* it is use to create round border and also change the border shape */
+            
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .a{
+            grid-row:1/2; /*this are use to start row and last index row*/
+            grid-column: 1/2;/*this are use to star column and last column index */
+
+        }
+        .b{
+            /* grid-row:2/3;
+            grid-column: 1/2; */
+            /* this are use to line based propery grid-area */
+            /* the syntax of this property is  */
+            /* row-start/column-start/row-end/column-end */
+            grid-area: 2/1/3/2;
+            
+        }
+        .c{
+            grid-row:1/2;
+            grid-column: 2/3;
+            
+        }
+        .d{
+            grid-row:2/3;
+            grid-column: 2/3;
+            
+        }
+        .e{
+            grid-row:1/2;
+            grid-column: 3/3;
+            
+        }
+        .f{
+            grid-row:2/3;
+            grid-column: 3/3;
+            
+        }
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+    <div class="box f">F</div>
+
+</div>
+</body>
+</html>
